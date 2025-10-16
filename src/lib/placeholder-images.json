@@ -3,50 +3,50 @@
     {
       "id": "toner-black-1",
       "description": "A standard black toner cartridge.",
-      "imageUrl": "https://picsum.photos/seed/101/600/600",
-      "imageHint": "toner cartridge"
+      "imageUrl": "https://placehold.co/600x600/000000/FFFFFF/png?text=Asta+Black+Toner",
+      "imageHint": "asta toner"
     },
     {
       "id": "toner-cyan-1",
       "description": "A standard cyan toner cartridge.",
-      "imageUrl": "https://picsum.photos/seed/102/600/600",
-      "imageHint": "toner cartridge"
+      "imageUrl": "https://placehold.co/600x600/00FFFF/000000/png?text=Asta+Cyan+Toner",
+      "imageHint": "asta toner"
     },
     {
       "id": "toner-magenta-1",
       "description": "A standard magenta toner cartridge.",
-      "imageUrl": "https://picsum.photos/seed/103/600/600",
-      "imageHint": "toner cartridge"
+      "imageUrl": "https://placehold.co/600x600/FF00FF/FFFFFF/png?text=Asta+Magenta+Toner",
+      "imageHint": "asta toner"
     },
     {
       "id": "toner-yellow-1",
       "description": "A standard yellow toner cartridge.",
-      "imageUrl": "https://picsum.photos/seed/104/600/600",
-      "imageHint": "toner cartridge"
+      "imageUrl": "https://placehold.co/600x600/FFFF00/000000/png?text=Asta+Yellow+Toner",
+      "imageHint": "asta toner"
     },
     {
       "id": "toner-black-xl-1",
       "description": "A high-yield black toner cartridge.",
-      "imageUrl": "https://picsum.photos/seed/105/600/600",
-      "imageHint": "toner cartridge"
+      "imageUrl": "https://placehold.co/600x600/000000/FFFFFF/png?text=Asta+Black+Toner+XL",
+      "imageHint": "asta toner"
     },
     {
       "id": "toner-value-pack-1",
       "description": "A value pack of four toner cartridges (CMYK).",
-      "imageUrl": "https://picsum.photos/seed/106/600/600",
-      "imageHint": "toner cartridge"
+      "imageUrl": "https://placehold.co/600x600/CCCCCC/000000/png?text=Asta+CMYK+Pack",
+      "imageHint": "asta toner"
     },
     {
       "id": "toner-black-2",
       "description": "A compatible black toner cartridge for a different printer brand.",
-      "imageUrl": "https://picsum.photos/seed/107/600/600",
-      "imageHint": "toner cartridge"
+      "imageUrl": "https://placehold.co/600x600/000000/FFFFFF/png?text=Asta+Toner+505A",
+      "imageHint": "asta toner"
     },
     {
       "id": "toner-black-oem-1",
       "description": "An original equipment manufacturer black toner cartridge.",
-      "imageUrl": "https://picsum.photos/seed/108/600/600",
-      "imageHint": "toner cartridge"
+      "imageUrl": "https://placehold.co/600x600/000000/FFFFFF/png?text=Asta+OEM+Toner+85A",
+      "imageHint": "asta toner"
     }
   ]
 }
