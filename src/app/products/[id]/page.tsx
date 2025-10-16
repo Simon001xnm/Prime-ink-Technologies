@@ -65,7 +65,7 @@ export default function ProductPage({ params }: ProductPageProps) {
         <div className="flex flex-col space-y-6">
           <div>
             <h1 className="text-3xl font-bold tracking-tight lg:text-4xl font-headline">{product.name}</h1>
-            <p className="mt-2 text-2xl font-bold text-foreground">${product.price.toFixed(2)}</p>
+            <p className="mt-2 text-2xl font-bold text-foreground">KES {product.price.toLocaleString()}</p>
           </div>
 
           <p className="text-muted-foreground">{product.description}</p>

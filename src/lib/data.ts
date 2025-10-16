@@ -5,7 +5,7 @@ export const products: Product[] = [
     id: 'prod_001',
     name: 'Prime Black Toner 101',
     description: 'High-quality black toner for crisp, professional documents. Perfect for everyday printing.',
-    price: 79.99,
+    price: 10400,
     imageId: 'toner-black-1',
     specifications: {
       color: 'Black',
@@ -17,7 +17,7 @@ export const products: Product[] = [
     id: 'prod_002',
     name: 'Prime Cyan Toner 202',
     description: 'Vibrant cyan toner that delivers brilliant color prints and consistency.',
-    price: 89.99,
+    price: 11700,
     imageId: 'toner-cyan-1',
     specifications: {
       color: 'Cyan',
@@ -29,7 +29,7 @@ export const products: Product[] = [
     id: 'prod_003',
     name: 'Prime Magenta Toner 303',
     description: 'Rich magenta toner for eye-catching images and graphics.',
-    price: 89.99,
+    price: 11700,
     imageId: 'toner-magenta-1',
     specifications: {
       color: 'Magenta',
@@ -41,7 +41,7 @@ export const products: Product[] = [
     id: 'prod_004',
     name: 'Prime Yellow Toner 404',
     description: 'Bright yellow toner for vivid color and sharp details.',
-    price: 89.99,
+    price: 11700,
     imageId: 'toner-yellow-1',
     specifications: {
       color: 'Yellow',
@@ -53,7 +53,7 @@ export const products: Product[] = [
     id: 'prod_005',
     name: 'Prime Black Toner XL 101X',
     description: 'High-yield black toner for high-volume printing. More pages, less hassle.',
-    price: 129.99,
+    price: 16900,
     imageId: 'toner-black-xl-1',
     specifications: {
       color: 'Black',
@@ -65,7 +65,7 @@ export const products: Product[] = [
     id: 'prod_006',
     name: 'Prime CMYK Value Pack',
     description: 'Get all four colors (Cyan, Magenta, Yellow, Black) in one convenient value pack.',
-    price: 329.99,
+    price: 42900,
     imageId: 'toner-value-pack-1',
     specifications: {
       color: 'CMYK',
@@ -77,7 +77,7 @@ export const products: Product[] = [
     id: 'prod_007',
     name: 'Prime Black Toner 505A',
     description: 'Compatible black toner for HP LaserJet P2035 and P2055 series printers.',
-    price: 69.99,
+    price: 9100,
     imageId: 'toner-black-2',
     specifications: {
       color: 'Black',
@@ -89,7 +89,7 @@ export const products: Product[] = [
     id: 'prod_008',
     name: 'Prime OEM Black Toner 85A',
     description: 'Genuine OEM black toner for guaranteed compatibility and quality.',
-    price: 99.99,
+    price: 13000,
     imageId: 'toner-black-oem-1',
     specifications: {
       color: 'Black',

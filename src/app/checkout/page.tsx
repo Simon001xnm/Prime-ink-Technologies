@@ -23,8 +23,8 @@ export default function CheckoutPage() {
     }
   }, [cartCount, router]);
 
-  const shippingCost = 5.99;
-  const tax = cartTotal * 0.08;
+  const shippingCost = 500; // Example shipping in KES
+  const tax = cartTotal * 0.16; // Example VAT in KES
   const total = cartTotal + shippingCost + tax;
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -70,7 +70,7 @@ export default function CheckoutPage() {
                     <Input id="city" required />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="zip">ZIP Code</Label>
+                    <Label htmlFor="zip">Postal Code</Label>
                     <Input id="zip" required />
                   </div>
                 </div>
@@ -117,24 +117,24 @@ export default function CheckoutPage() {
                           </div>
                           <div>
                             <p className="font-semibold">{item.product.name}</p>
-                            <p className="text-sm text-muted-foreground">${item.product.price.toFixed(2)}</p>
+                            <p className="text-sm text-muted-foreground">KES {item.product.price.toLocaleString()}</p>
                           </div>
                         </div>
-                        <p className="font-semibold">${(item.product.price * item.quantity).toFixed(2)}</p>
+                        <p className="font-semibold">KES {(item.product.price * item.quantity).toLocaleString()}</p>
                       </li>
                     );
                   })}
                 </ul>
                 <Separator />
                 <div className="space-y-2">
-                  <div className="flex justify-between"><p>Subtotal</p><p>${cartTotal.toFixed(2)}</p></div>
-                  <div className="flex justify-between text-muted-foreground"><p>Shipping</p><p>${shippingCost.toFixed(2)}</p></div>
-                  <div className="flex justify-between text-muted-foreground"><p>Taxes</p><p>${tax.toFixed(2)}</p></div>
+                  <div className="flex justify-between"><p>Subtotal</p><p>KES {cartTotal.toLocaleString()}</p></div>
+                  <div className="flex justify-between text-muted-foreground"><p>Shipping</p><p>KES {shippingCost.toLocaleString()}</p></div>
+                  <div className="flex justify-between text-muted-foreground"><p>Taxes (16% VAT)</p><p>KES {tax.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p></div>
                 </div>
                 <Separator />
                 <div className="flex justify-between text-lg font-bold">
                   <p>Total</p>
-                  <p>${total.toFixed(2)}</p>
+                  <p>KES {total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
                 </div>
                 <Button type="submit" size="lg" className="w-full">Place Order</Button>
               </CardContent>

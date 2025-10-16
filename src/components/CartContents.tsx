@@ -49,7 +49,7 @@ export default function CartContents() {
                   <Link href={`/products/${item.product.id}`} className="font-semibold hover:text-primary">
                       {item.product.name}
                   </Link>
-                  <p className="text-sm text-muted-foreground">${item.product.price.toFixed(2)}</p>
+                  <p className="text-sm text-muted-foreground">KES {item.product.price.toLocaleString()}</p>
                   <div className="mt-2 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                        <Button variant="outline" size="icon" className="h-8 w-8" onClick={() => updateQuantity(item.id, item.quantity - 1)}>
@@ -65,7 +65,7 @@ export default function CartContents() {
                     </Button>
                   </div>
                 </div>
-                <p className="font-semibold">${(item.product.price * item.quantity).toFixed(2)}</p>
+                <p className="font-semibold">KES {(item.product.price * item.quantity).toLocaleString()}</p>
               </li>
             );
           })}
@@ -76,7 +76,7 @@ export default function CartContents() {
         <Separator />
         <div className="flex justify-between font-semibold">
           <span>Subtotal</span>
-          <span>${cartTotal.toFixed(2)}</span>
+          <span>KES {cartTotal.toLocaleString()}</span>
         </div>
         <p className="text-sm text-muted-foreground">Shipping and taxes will be calculated at checkout.</p>
         <Button asChild size="lg" className="w-full">

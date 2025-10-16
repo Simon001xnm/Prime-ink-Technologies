@@ -53,7 +53,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </Link>
       </CardContent>
       <CardFooter className="flex items-center justify-between p-4 pt-0">
-        <p className="text-lg font-bold text-foreground">${product.price.toFixed(2)}</p>
+        <p className="text-lg font-bold text-foreground">KES {product.price.toLocaleString()}</p>
         <Button size="sm" onClick={handleAddToCart}>
           <ShoppingCart className="mr-2 h-4 w-4" />
           Add to Cart
