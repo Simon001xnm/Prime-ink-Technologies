@@ -56,9 +56,8 @@ export default function Home() {
               <Image
                 src="/Image 2025-10-17 at 12.06.42_b5996239.jpg"
                 alt="Prime Ink Technologies delivery person"
-                width={600}
-                height={400}
-                className="h-full w-full object-cover"
+                fill
+                className="object-cover"
                 data-ai-hint="delivery person customer"
               />
               <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
