@@ -3,7 +3,7 @@ import type { Product } from '@/types';
 export const products: Product[] = [
   {
     id: 'prod_001',
-    name: 'CF226A 26A',
+    name: 'CF258A CF258X 58X 59X 76A',
     description: 'High-quality black toner for crisp, professional documents. Perfect for everyday printing.',
     price: 10400,
     imageId: 'toner-1',
@@ -11,15 +11,15 @@ export const products: Product[] = [
   },
   {
     id: 'prod_002',
-    name: 'ASTA Factory Wholesale Compatible CC388X 88X Toner Cartridge For HP...',
-    description: 'Vibrant black toner that delivers brilliant color prints and consistency.',
+    name: 'CF410A CF411A CF412A CF413A 410A',
+    description: 'Vibrant color toner set that delivers brilliant color prints and consistency.',
     price: 11700,
     imageId: 'toner-2',
-    specifications: { color: 'Black', yield: 'Approx. 2,300 pages', technology: 'Laser' },
+    specifications: { color: 'CMYK', yield: 'Approx. 2,300 pages', technology: 'Laser' },
   },
   {
     id: 'prod_003',
-    name: 'CRG-052 CRG-052H',
+    name: 'W1105A W1106A W1107A 105A 106A 107A',
     description: 'Rich black toner for eye-catching images and graphics.',
     price: 11700,
     imageId: 'toner-3',
@@ -27,7 +27,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_004',
-    name: 'CRG-128',
+    name: 'Universal-CE285A CB436A CB435A CE278A CRG-128',
     description: 'Bright black toner for vivid color and sharp details.',
     price: 11700,
     imageId: 'toner-4',
@@ -35,7 +35,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_005',
-    name: 'CE285A 85A',
+    name: 'Universal-CE505A 05A CF280A 80A CRG-319',
     description: 'High-yield black toner for high-volume printing. More pages, less hassle.',
     price: 16900,
     imageId: 'toner-5',
@@ -43,7 +43,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_006',
-    name: 'CRG-137 CRG-337 CRG-737',
+    name: 'Universal-CB435A 35A CE285A 85A CB436A 36A',
     description: 'Get our reliable black toner in one convenient value pack.',
     price: 42900,
     imageId: 'toner-6',
@@ -51,7 +51,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_007',
-    name: 'Universal-CF283A 83A CRG-137A CRG-337A CRG-737A',
+    name: 'MLT-D111S',
     description: 'Compatible black toner for various laser printers.',
     price: 9100,
     imageId: 'toner-7',
@@ -59,7 +59,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_008',
-    name: 'MLT-D101S',
+    name: 'TN-2410 TN-2420 DR-2425',
     description: 'Genuine OEM black toner for guaranteed compatibility and quality.',
     price: 13000,
     imageId: 'toner-8',
@@ -67,7 +67,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_009',
-    name: 'CF283A 83A',
+    name: 'Universal-Q2612A 12A FX-9 FX-10 CRG-103',
     description: 'A standard black toner for your daily printing needs.',
     price: 10400,
     imageId: 'toner-9',
@@ -75,7 +75,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_010',
-    name: 'CF280A 80A',
+    name: 'CF279A 79A',
     description: 'Crisp and clear prints with this reliable black toner.',
     price: 11000,
     imageId: 'toner-10',
@@ -83,7 +83,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_011',
-    name: 'CRG-047 Drum CRG-049',
+    name: 'Universal - CE310A CE311A CE312A CE313A',
     description: 'Cost-effective toner for high-quality printing.',
     price: 9800,
     imageId: 'toner-11',
@@ -91,7 +91,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_012',
-    name: 'Universal-CB435A 35A CE285A 85A',
+    name: 'CF217A 17A',
     description: 'Long-lasting toner for consistent performance.',
     price: 12500,
     imageId: 'toner-12',
