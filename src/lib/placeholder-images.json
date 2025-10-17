@@ -1,51 +1,75 @@
 {
   "placeholderImages": [
     {
-      "id": "toner-black-1",
-      "description": "A standard black toner cartridge.",
-      "imageUrl": "https://placehold.co/600x600/000000/FFFFFF/png?text=Asta+Black+Toner",
+      "id": "toner-1",
+      "description": "Asta Toner 1",
+      "imageUrl": "/20210820074839c8cc46e673167963-360x360-c.webp",
       "imageHint": "asta toner"
     },
     {
-      "id": "toner-cyan-1",
-      "description": "A standard cyan toner cartridge.",
-      "imageUrl": "https://placehold.co/600x600/00FFFF/000000/png?text=Asta+Cyan+Toner",
+      "id": "toner-2",
+      "description": "Asta Toner 2",
+      "imageUrl": "/20210820074947ce96a270bbac9a68-360x360-c.webp",
       "imageHint": "asta toner"
     },
     {
-      "id": "toner-magenta-1",
-      "description": "A standard magenta toner cartridge.",
-      "imageUrl": "https://placehold.co/600x600/FF00FF/FFFFFF/png?text=Asta+Magenta+Toner",
+      "id": "toner-3",
+      "description": "Asta Toner 3",
+      "imageUrl": "/20210820080739d7d41cfcdae45ee4-360x360-c.webp",
       "imageHint": "asta toner"
     },
     {
-      "id": "toner-yellow-1",
-      "description": "A standard yellow toner cartridge.",
-      "imageUrl": "https://placehold.co/600x600/FFFF00/000000/png?text=Asta+Yellow+Toner",
+      "id": "toner-4",
+      "description": "Asta Toner 4",
+      "imageUrl": "/20210820081501b230f62b9cfe05a4-360x360-c.webp",
       "imageHint": "asta toner"
     },
     {
-      "id": "toner-black-xl-1",
-      "description": "A high-yield black toner cartridge.",
-      "imageUrl": "https://placehold.co/600x600/000000/FFFFFF/png?text=Asta+Black+Toner+XL",
+      "id": "toner-5",
+      "description": "Asta Toner 5",
+      "imageUrl": "/20210820081815ad590fd7b34428d9-360x360-c (1).webp",
       "imageHint": "asta toner"
     },
     {
-      "id": "toner-value-pack-1",
-      "description": "A value pack of four toner cartridges (CMYK).",
-      "imageUrl": "https://placehold.co/600x600/CCCCCC/000000/png?text=Asta+CMYK+Pack",
+      "id": "toner-6",
+      "description": "Asta Toner 6",
+      "imageUrl": "/20210820081815ad590fd7b34428d9-360x360-c.webp",
       "imageHint": "asta toner"
     },
     {
-      "id": "toner-black-2",
-      "description": "A compatible black toner cartridge for a different printer brand.",
-      "imageUrl": "https://placehold.co/600x600/000000/FFFFFF/png?text=Asta+Toner+505A",
+      "id": "toner-7",
+      "description": "Asta Toner 7",
+      "imageUrl": "/20210820082642d60bd611bc3fe21f-360x360-c.webp",
       "imageHint": "asta toner"
     },
     {
-      "id": "toner-black-oem-1",
-      "description": "An original equipment manufacturer black toner cartridge.",
-      "imageUrl": "https://placehold.co/600x600/000000/FFFFFF/png?text=Asta+OEM+Toner+85A",
+      "id": "toner-8",
+      "description": "Asta Toner 8",
+      "imageUrl": "/20210820082911adfdabceb34f07c0-360x360-c.webp",
+      "imageHint": "asta toner"
+    },
+    {
+      "id": "toner-9",
+      "description": "Asta Toner 9",
+      "imageUrl": "/20210820083115d1f4e36eb94e135c-360x360-c.webp",
+      "imageHint": "asta toner"
+    },
+    {
+      "id": "toner-10",
+      "description": "Asta Toner 10",
+      "imageUrl": "/20210820083416f3b9fc703a7263b0-360x360-c.webp",
+      "imageHint": "asta toner"
+    },
+    {
+      "id": "toner-11",
+      "description": "Asta Toner 11",
+      "imageUrl": "/20210820092131bee5b915921d2a3b-360x360-c.webp",
+      "imageHint": "asta toner"
+    },
+    {
+      "id": "toner-12",
+      "description": "Asta Toner 12",
+      "imageUrl": "/20210820092259f84698b1c1bcec0d-360x360-c.webp",
       "imageHint": "asta toner"
     }
   ]
