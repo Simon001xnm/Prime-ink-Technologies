@@ -36,7 +36,17 @@ export default function Footer() {
         </div>
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Prime Ink Technologies Inc. All rights reserved.</p>
-          <p className="mt-2">Developed and maintained by Simon Styles Technologies Limited</p>
+          <p className="mt-2">
+            Developed and maintained by{' '}
+            <a
+              href="https://simon-websites.vercel.app/services"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-foreground"
+            >
+              Simon Styles Technologies Limited
+            </a>
+          </p>
         </div>
       </div>
     </footer>
