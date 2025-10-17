@@ -54,8 +54,8 @@ export default function Home() {
             </div>
             <div className="relative flex items-center justify-center rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/1759343566626.jpg"
-                alt="Customer receiving a delivery"
+                src="/Image 2025-10-17 at 12.06.42_b5996239.jpg"
+                alt="Prime Ink Technologies delivery person"
                 width={600}
                 height={400}
                 className="h-full w-full object-cover"
