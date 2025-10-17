@@ -52,7 +52,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="relative flex items-center justify-center rounded-lg overflow-hidden shadow-2xl">
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-2xl">
               <Image
                 src="/1759343566626.jpg"
                 alt="Prime Ink Technologies delivery person"
