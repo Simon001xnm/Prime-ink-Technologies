@@ -5,6 +5,7 @@ import { products } from '@/lib/data';
 import ProductCard from '@/components/ProductCard';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -35,7 +36,7 @@ export default function Home() {
                   Reliable Toner for Your Business
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Prime Ink Technologies offers premium, long-lasting toner cartridges compatible with all major printer brands.
+                  Prime Ink Technologies offers premium, long-lasting toner cartridges compatible with all major printer brands. We deliver to you!
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -44,26 +45,23 @@ export default function Home() {
                     Shop Now
                   </Link>
                 </Button>
+                 <Button asChild size="lg" variant="outline">
+                  <Link href="#">
+                    Contact Us
+                  </Link>
+                </Button>
               </div>
             </div>
-            <div className="flex items-center justify-center">
-              <svg 
-                data-ai-hint="printer icon"
-                xmlns="http://www.w3.org/2000/svg" 
-                width="300" 
-                height="300" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="1" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                className="h-full w-full max-w-[300px] text-primary drop-shadow-lg"
-              >
-                <path d="M6 9V2h12v7" />
-                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-                <path d="M6 14h12v8H6z" />
-              </svg>
+            <div className="relative flex items-center justify-center rounded-lg overflow-hidden shadow-2xl">
+              <Image
+                src="/1759343566626.jpg"
+                alt="Customer receiving a delivery"
+                width={600}
+                height={400}
+                className="h-full w-full object-cover"
+                data-ai-hint="delivery person"
+              />
+              <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
             </div>
           </div>
         </div>
