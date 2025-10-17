@@ -19,7 +19,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   const handleShopOnWhatsApp = () => {
     const message = encodeURIComponent(`Hello, I'm interested in ordering "${product.name}".`);
-    const whatsappUrl = `https://wa.me/254712345678?text=${message}`; // Replace with your number
+    const whatsappUrl = `https://wa.me/254710430203?text=${message}`; // Replace with your number
     window.open(whatsappUrl, '_blank');
     toast({
       title: "Redirecting to WhatsApp",

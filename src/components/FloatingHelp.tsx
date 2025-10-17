@@ -21,7 +21,7 @@ export default function FloatingHelp() {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I have a question.");
-    const whatsappUrl = `https://wa.me/254712345678?text=${message}`; // Replace with your number
+    const whatsappUrl = `https://wa.me/254710430203?text=${message}`; // Replace with your number
     window.open(whatsappUrl, '_blank');
   };
 
