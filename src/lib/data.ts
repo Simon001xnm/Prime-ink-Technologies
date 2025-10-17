@@ -3,7 +3,7 @@ import type { Product } from '@/types';
 export const products: Product[] = [
   {
     id: 'prod_001',
-    name: 'Asta Black Toner 001',
+    name: 'CF226A 26A',
     description: 'High-quality black toner for crisp, professional documents. Perfect for everyday printing.',
     price: 10400,
     imageId: 'toner-1',
@@ -11,7 +11,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_002',
-    name: 'Asta Black Toner 002',
+    name: 'ASTA Factory Wholesale Compatible CC388X 88X Toner Cartridge For HP...',
     description: 'Vibrant black toner that delivers brilliant color prints and consistency.',
     price: 11700,
     imageId: 'toner-2',
@@ -19,7 +19,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_003',
-    name: 'Asta Black Toner 003',
+    name: 'CRG-052 CRG-052H',
     description: 'Rich black toner for eye-catching images and graphics.',
     price: 11700,
     imageId: 'toner-3',
@@ -27,7 +27,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_004',
-    name: 'Asta Black Toner 004',
+    name: 'CRG-128',
     description: 'Bright black toner for vivid color and sharp details.',
     price: 11700,
     imageId: 'toner-4',
@@ -35,7 +35,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_005',
-    name: 'Asta Black Toner 005',
+    name: 'CE285A 85A',
     description: 'High-yield black toner for high-volume printing. More pages, less hassle.',
     price: 16900,
     imageId: 'toner-5',
@@ -43,7 +43,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_006',
-    name: 'Asta Black Toner 006',
+    name: 'CRG-137 CRG-337 CRG-737',
     description: 'Get our reliable black toner in one convenient value pack.',
     price: 42900,
     imageId: 'toner-6',
@@ -51,7 +51,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_007',
-    name: 'Asta Black Toner 007',
+    name: 'Universal-CF283A 83A CRG-137A CRG-337A CRG-737A',
     description: 'Compatible black toner for various laser printers.',
     price: 9100,
     imageId: 'toner-7',
@@ -59,7 +59,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_008',
-    name: 'Asta Black Toner 008',
+    name: 'MLT-D101S',
     description: 'Genuine OEM black toner for guaranteed compatibility and quality.',
     price: 13000,
     imageId: 'toner-8',
@@ -67,7 +67,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_009',
-    name: 'Asta Black Toner 009',
+    name: 'CF283A 83A',
     description: 'A standard black toner for your daily printing needs.',
     price: 10400,
     imageId: 'toner-9',
@@ -75,7 +75,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_010',
-    name: 'Asta Black Toner 010',
+    name: 'CF280A 80A',
     description: 'Crisp and clear prints with this reliable black toner.',
     price: 11000,
     imageId: 'toner-10',
@@ -83,7 +83,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_011',
-    name: 'Asta Black Toner 011',
+    name: 'CRG-047 Drum CRG-049',
     description: 'Cost-effective toner for high-quality printing.',
     price: 9800,
     imageId: 'toner-11',
@@ -91,7 +91,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_012',
-    name: 'Asta Black Toner 012',
+    name: 'Universal-CB435A 35A CE285A 85A',
     description: 'Long-lasting toner for consistent performance.',
     price: 12500,
     imageId: 'toner-12',
