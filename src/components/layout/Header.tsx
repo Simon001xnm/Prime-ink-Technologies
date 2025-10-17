@@ -1,21 +1,19 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, ShoppingCart, User, X } from 'lucide-react';
+import { Menu, User, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetHeader } from '@/components/ui/sheet';
 import { Logo } from '@/components/Logo';
-import { useCart } from '@/hooks/use-cart';
-import CartContents from '@/components/CartContents';
 import { useState } from 'react';
 
 const navLinks = [
   { href: '/#products', label: 'Products' },
   { href: '/track-order', label: 'Track Order' },
+  { href: '/account', label: 'My Account' },
 ];
 
 export default function Header() {
-  const { cartCount } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -79,25 +77,6 @@ export default function Header() {
         </div>
 
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" aria-label={`Shopping cart with ${cartCount} items`}>
-                <ShoppingCart className="h-5 w-5" />
-                {cartCount > 0 && (
-                  <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
-                    {cartCount}
-                  </span>
-                )}
-              </Button>
-            </SheetTrigger>
-            <SheetContent className="flex w-full flex-col sm:max-w-lg">
-              <SheetHeader>
-                <SheetTitle>Shopping Cart</SheetTitle>
-              </SheetHeader>
-              <CartContents />
-            </SheetContent>
-          </Sheet>
-
           <Link href="/login">
             <Button variant="ghost" size="icon" aria-label="User account">
               <User className="h-5 w-5" />

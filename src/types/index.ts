@@ -10,9 +10,3 @@ export type Product = {
     technology: string;
   };
 };
-
-export type CartItem = {
-  id: string; // Unique ID for the cart item instance
-  product: Product;
-  quantity: number;
-};

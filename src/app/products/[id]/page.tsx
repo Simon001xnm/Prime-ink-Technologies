@@ -7,9 +7,8 @@ import { getProductById, products } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { useCart } from '@/hooks/use-cart';
 import { useToast } from '@/hooks/use-toast';
-import { Minus, Plus, ShoppingCart } from 'lucide-react';
+import { Minus, Plus, MessageCircle } from 'lucide-react';
 import PersonalizedRecommendations from '@/components/ai/PersonalizedRecommendations';
 import Link from 'next/link';
 
@@ -21,7 +20,6 @@ type ProductPageProps = {
 
 export default function ProductPage({ params }: ProductPageProps) {
   const [quantity, setQuantity] = useState(1);
-  const { addToCart } = useCart();
   const { toast } = useToast();
   
   const product = getProductById(params.id);
@@ -32,11 +30,13 @@ export default function ProductPage({ params }: ProductPageProps) {
 
   const placeholder = PlaceHolderImages.find(p => p.id === product.imageId);
 
-  const handleAddToCart = () => {
-    addToCart(product, quantity);
+  const handleShopOnWhatsApp = () => {
+    const message = encodeURIComponent(`Hello, I'm interested in ordering ${quantity} of "${product.name}".`);
+    const whatsappUrl = `https://wa.me/254712345678?text=${message}`; // Replace with your number
+    window.open(whatsappUrl, '_blank');
     toast({
-      title: "Added to cart",
-      description: `${quantity} x ${product.name} added to your cart.`,
+      title: "Redirecting to WhatsApp",
+      description: "Please complete your order on WhatsApp.",
     });
   };
 
@@ -80,9 +80,9 @@ export default function ProductPage({ params }: ProductPageProps) {
                 <Plus className="h-4 w-4" />
               </Button>
             </div>
-            <Button size="lg" onClick={handleAddToCart} className="flex-1">
-              <ShoppingCart className="mr-2 h-5 w-5" />
-              Add to Cart
+            <Button size="lg" onClick={handleShopOnWhatsApp} className="flex-1">
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Shop on WhatsApp
             </Button>
           </div>
           

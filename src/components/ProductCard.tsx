@@ -6,24 +6,24 @@ import type { Product } from '@/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { useCart } from '@/hooks/use-cart';
 import { useToast } from '@/hooks/use-toast';
-import { ShoppingCart } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const { addToCart } = useCart();
   const { toast } = useToast();
   const placeholder = PlaceHolderImages.find(p => p.id === product.imageId);
 
-  const handleAddToCart = () => {
-    addToCart(product, 1);
+  const handleShopOnWhatsApp = () => {
+    const message = encodeURIComponent(`Hello, I'm interested in ordering "${product.name}".`);
+    const whatsappUrl = `https://wa.me/254712345678?text=${message}`; // Replace with your number
+    window.open(whatsappUrl, '_blank');
     toast({
-      title: "Added to cart",
-      description: `${product.name} is now in your shopping cart.`,
+      title: "Redirecting to WhatsApp",
+      description: "Please complete your order on WhatsApp.",
     });
   };
 
@@ -54,9 +54,9 @@ export default function ProductCard({ product }: ProductCardProps) {
       </CardContent>
       <CardFooter className="flex items-center justify-between p-4 pt-0">
         <p className="text-lg font-bold text-foreground">KES {product.price.toLocaleString()}</p>
-        <Button size="sm" onClick={handleAddToCart}>
-          <ShoppingCart className="mr-2 h-4 w-4" />
-          Add to Cart
+        <Button size="sm" onClick={handleShopOnWhatsApp}>
+          <MessageCircle className="mr-2 h-4 w-4" />
+          Shop
         </Button>
       </CardFooter>
     </Card>

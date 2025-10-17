@@ -1,24 +1,42 @@
 import { Logo } from '@/components/Logo';
 import Link from 'next/link';
+import { Input } from '../ui/input';
+import { Button } from '../ui/button';
 
 export default function Footer() {
   return (
     <footer className="border-t">
-      <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
-        <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-          <Logo />
-          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            &copy; {new Date().getFullYear()} Prime Ink Technologies Inc. All rights reserved.
-          </p>
+      <div className="container py-10">
+        <div className="grid gap-8 md:grid-cols-3">
+          <div className="space-y-4">
+            <Logo />
+            <p className="text-sm text-muted-foreground">
+              Your source for high-quality, reliable toner cartridges.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <h4 className="font-semibold">Newsletter</h4>
+            <p className="text-sm text-muted-foreground">Subscribe to our newsletter for updates and special offers.</p>
+            <div className="flex gap-2">
+              <Input type="email" placeholder="Enter your email" />
+              <Button>Subscribe</Button>
+            </div>
+          </div>
+          <div className="space-y-4">
+            <h4 className="font-semibold">Legal</h4>
+            <nav className="flex flex-col gap-2">
+              <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
+                Terms of Service
+              </Link>
+              <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
+                Privacy Policy
+              </Link>
+            </nav>
+          </div>
         </div>
-        <nav className="flex gap-4 sm:ml-auto sm:gap-6">
-          <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-            Terms of Service
-          </Link>
-          <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-            Privacy Policy
-          </Link>
-        </nav>
+        <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
+          &copy; {new Date().getFullYear()} Prime Ink Technologies Inc. All rights reserved.
+        </div>
       </div>
     </footer>
   );

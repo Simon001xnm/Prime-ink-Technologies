@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { CartProvider } from '@/context/CartProvider';
+import FloatingHelp from '@/components/FloatingHelp';
 
 export const metadata: Metadata = {
   title: 'Prime Ink Technologies',
@@ -24,14 +24,13 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn('min-h-screen bg-background font-body antialiased')}>
-        <CartProvider>
-          <div className="relative flex min-h-dvh flex-col bg-background">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-          <Toaster />
-        </CartProvider>
+        <div className="relative flex min-h-dvh flex-col bg-background">
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
+        <FloatingHelp />
+        <Toaster />
       </body>
     </html>
   );
