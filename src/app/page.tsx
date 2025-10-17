@@ -54,11 +54,11 @@ export default function Home() {
             </div>
             <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-2xl">
               <Image
-                src="/1759343566626.jpg"
-                alt="Prime Ink Technologies delivery person"
+                src="/CEO.jpg"
+                alt="Prime Ink Technologies CEO"
                 fill
                 className="object-cover"
-                data-ai-hint="delivery person customer"
+                data-ai-hint="company ceo portrait"
               />
               <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
             </div>
