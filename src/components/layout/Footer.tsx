@@ -35,7 +35,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} Prime Ink Technologies Inc. All rights reserved.
+          <p>&copy; {new Date().getFullYear()} Prime Ink Technologies Inc. All rights reserved.</p>
+          <p className="mt-2">Developed and maintained by Simon Styles Technologies Limited</p>
         </div>
       </div>
     </footer>
