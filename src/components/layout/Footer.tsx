@@ -39,7 +39,7 @@ export default function Footer() {
           <p className="mt-2">
             Developed and maintained by{' '}
             <a
-              href="https://simonstyles.co.ke/portfolio"
+              href="https://simonstyles.co.ke"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-foreground"
