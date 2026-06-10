@@ -6,7 +6,7 @@ import ProductCard from '@/components/ProductCard';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Cpu, Zap, Shield, Globe } from 'lucide-react';
+import { Cpu, Zap, Shield, Globe, AlertTriangle } from 'lucide-react';
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -35,17 +35,24 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div className="flex flex-col space-y-8">
-              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                </span>
-                Neural Printing Systems Active
+              <div className="flex flex-wrap gap-3">
+                <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                  </span>
+                  Neural Systems Active
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-red-500">
+                  <AlertTriangle className="h-3 w-3 animate-pulse" />
+                  Priority Uplink Established
+                </div>
               </div>
               <div className="space-y-4">
                 <h1 className="text-4xl font-extrabold tracking-tighter sm:text-6xl xl:text-7xl/none neon-glow font-headline">
                   NEXT-GEN <br />
-                  <span className="text-primary italic">PRIME INK</span>
+                  <span className="text-primary italic">PRIME </span>
+                  <span className="text-red-500">INK</span>
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
                   Engineered for precision. Optimized for longevity. Prime Ink Technologies delivers industrial-grade toner via automated supply lines.
@@ -55,27 +62,27 @@ export default function Home() {
                 <Button asChild size="lg" className="h-14 px-8 text-lg font-bold uppercase tracking-widest shadow-[0_0_20px_rgba(14,165,233,0.4)] transition-all hover:scale-105">
                   <Link href="#products">Initialize Inventory</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="h-14 border-primary/50 text-primary hover:bg-primary/10">
-                  <Link href="#">System Specifications</Link>
+                <Button asChild size="lg" variant="outline" className="h-14 border-red-500/50 text-red-500 hover:bg-red-500/10">
+                  <Link href="#">Core Specifications</Link>
                 </Button>
               </div>
               <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
                 {[
-                  { icon: Cpu, label: "Quantum Yield" },
-                  { icon: Zap, label: "Instant Dry" },
-                  { icon: Shield, label: "ISO Guard" },
-                  { icon: Globe, label: "Global Sync" }
+                  { icon: Cpu, label: "Quantum Yield", color: "text-primary" },
+                  { icon: Zap, label: "Instant Dry", color: "text-red-500" },
+                  { icon: Shield, label: "ISO Guard", color: "text-primary" },
+                  { icon: Globe, label: "Global Sync", color: "text-red-500" }
                 ].map((feature, i) => (
-                  <div key={i} className="flex flex-col items-center gap-2 rounded-lg border border-white/5 bg-white/5 p-4 text-center">
-                    <feature.icon className="h-6 w-6 text-primary" />
+                  <div key={i} className="flex flex-col items-center gap-2 rounded-lg border border-white/5 bg-white/5 p-4 text-center tech-border">
+                    <feature.icon className={`h-6 w-6 ${feature.color}`} />
                     <span className="text-[10px] uppercase tracking-tighter text-muted-foreground">{feature.label}</span>
                   </div>
                 ))}
               </div>
             </div>
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-              <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-black border border-primary/20 p-2">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-red-600 to-primary rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+              <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-black border border-white/10 p-2">
                 <Image
                   src="/CEO.jpg"
                   alt="Prime Ink Systems Command"
@@ -94,7 +101,7 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl neon-glow font-headline">NEURAL ARCHIVE</h2>
-            <div className="h-1 w-24 bg-primary rounded-full"></div>
+            <div className="h-1 w-24 bg-gradient-to-r from-primary to-red-600 rounded-full"></div>
             <p className="max-w-[800px] text-muted-foreground md:text-xl">
               Access the complete directory of high-density toner cartridges.
             </p>
@@ -115,8 +122,8 @@ export default function Home() {
             >
               Previous Sector
             </Button>
-            <div className="px-4 py-2 border border-primary/20 bg-primary/5 rounded font-mono text-sm text-primary">
-              LOC: {currentPage} / {totalPages}
+            <div className="px-4 py-2 border border-white/10 bg-white/5 rounded font-mono text-sm text-primary flex gap-2">
+              <span className="text-red-500">LOC:</span> {currentPage} / {totalPages}
             </div>
             <Button 
               onClick={handleNextPage} 

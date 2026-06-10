@@ -57,9 +57,9 @@ export default function ProductCard({ product }: ProductCardProps) {
         transition: 'transform 0.1s ease-out'
       }}
     >
-      <Card className="group flex h-full flex-col overflow-hidden bg-card/40 backdrop-blur-md border-white/5 transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] relative tilt-card">
+      <Card className="group flex h-full flex-col overflow-hidden bg-card/40 backdrop-blur-md border-white/5 transition-all duration-300 hover:border-red-500/50 hover:shadow-[0_0_30px_rgba(239,68,68,0.2)] relative tilt-card">
         <div className="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity z-20">
-          <Scan className="h-4 w-4 text-primary animate-pulse" />
+          <Scan className="h-4 w-4 text-red-500 animate-pulse" />
         </div>
         
         <CardHeader className="p-0 relative overflow-hidden">
@@ -80,25 +80,25 @@ export default function ProductCard({ product }: ProductCardProps) {
         
         <CardContent className="flex-1 p-5 space-y-3 tilt-content">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-mono text-primary uppercase border border-primary/30 px-2 py-0.5 rounded animate-pulse">
+            <span className="text-[10px] font-mono text-red-500 uppercase border border-red-500/30 px-2 py-0.5 rounded animate-pulse">
               {product.specifications.color}
             </span>
             <span className="text-[10px] font-mono text-muted-foreground uppercase">
-              {product.specifications.yield.split(' ')[1]} PG ARCHIVE
+              {product.specifications.yield.split(' ')[1]} ARCHIVE
             </span>
           </div>
           <Link href={`/products/${product.id}`}>
-            <CardTitle className="text-lg font-bold leading-tight group-hover:text-primary transition-colors line-clamp-2 uppercase tracking-tighter neon-glow">
+            <CardTitle className="text-lg font-bold leading-tight group-hover:text-red-500 transition-colors line-clamp-2 uppercase tracking-tighter neon-glow">
               {product.name}
             </CardTitle>
           </Link>
         </CardContent>
         
         <CardFooter className="flex items-center justify-between p-5 pt-0 border-t border-white/5 mt-4 tilt-content">
-          <p className="text-xl font-black text-primary font-mono tracking-tighter">
+          <p className="text-xl font-black text-red-500 font-mono tracking-tighter">
             KES {product.price.toLocaleString()}
           </p>
-          <Button size="sm" onClick={handleShopOnWhatsApp} className="rounded-full px-4 hover:shadow-[0_0_15px_rgba(14,165,233,0.4)] transition-all">
+          <Button size="sm" onClick={handleShopOnWhatsApp} className="rounded-full px-4 bg-red-600 hover:bg-red-700 hover:shadow-[0_0_15px_rgba(239,68,68,0.4)] transition-all">
             <ArrowRight className="h-4 w-4" />
           </Button>
         </CardFooter>
@@ -107,7 +107,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div 
           className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-10 transition-opacity duration-300 bg-[radial-gradient(circle_at_var(--mouse-x)_var(--mouse-y),white,transparent_50%)]"
           style={{
-            background: `radial-gradient(circle at ${rotate.y * -5 + 50}% ${rotate.x * 5 + 50}%, rgba(255,255,255,0.2), transparent 50%)`
+            background: `radial-gradient(circle at ${rotate.y * -5 + 50}% ${rotate.x * 5 + 50}%, rgba(239,68,68,0.2), transparent 50%)`
           }}
         />
       </Card>
