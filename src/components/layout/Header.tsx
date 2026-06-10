@@ -1,7 +1,8 @@
+
 'use client';
 
 import Link from 'next/link';
-import { Menu, User, Shield, Terminal, ShoppingCart } from 'lucide-react';
+import { Menu, User, Shield, Terminal, ShoppingCart, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetHeader } from '@/components/ui/sheet';
 import { Logo } from '@/components/Logo';
@@ -9,6 +10,7 @@ import { useState } from 'react';
 
 const navLinks = [
   { href: '/#products', label: 'Shop Products', icon: Terminal },
+  { href: '/about', label: 'About Us', icon: Info },
   { href: '/track-order', label: 'Track Order', icon: Shield },
   { href: '/account', label: 'My Account', icon: User },
 ];

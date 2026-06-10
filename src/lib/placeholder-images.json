@@ -263,6 +263,12 @@
       "description": "Asta Toner 44",
       "imageUrl": "/202108200817331915422e309e83c9-360x360-c.webp",
       "imageHint": "asta toner"
+    },
+    {
+      "id": "about-facility",
+      "description": "High-tech manufacturing facility",
+      "imageUrl": "https://picsum.photos/seed/ink-factory/800/450",
+      "imageHint": "cyberpunk laboratory"
     }
   ]
 }
