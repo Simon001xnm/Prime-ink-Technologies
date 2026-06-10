@@ -6,6 +6,7 @@ import ProductCard from '@/components/ProductCard';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Cpu, Zap, Shield, Globe } from 'lucide-react';
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -26,73 +27,108 @@ export default function Home() {
   };
 
   return (
-    <>
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-background">
+    <div className="relative overflow-hidden">
+      {/* Neural Background Grid */}
+      <div className="absolute inset-0 z-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none"></div>
+      
+      <section className="relative z-10 w-full py-20 md:py-32 lg:py-48">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline">
-                  Reliable Toner for Your Business
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            <div className="flex flex-col space-y-8">
+              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                Neural Printing Systems Active
+              </div>
+              <div className="space-y-4">
+                <h1 className="text-4xl font-extrabold tracking-tighter sm:text-6xl xl:text-7xl/none neon-glow font-headline">
+                  NEXT-GEN <br />
+                  <span className="text-primary italic">PRIME INK</span>
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Prime Ink Technologies offers premium, long-lasting toner cartridges compatible with all major printer brands. We deliver to you!
+                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
+                  Engineered for precision. Optimized for longevity. Prime Ink Technologies delivers industrial-grade toner via automated supply lines.
                 </p>
               </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                  <Link href="#products">
-                    Shop Now
-                  </Link>
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <Button asChild size="lg" className="h-14 px-8 text-lg font-bold uppercase tracking-widest shadow-[0_0_20px_rgba(14,165,233,0.4)] transition-all hover:scale-105">
+                  <Link href="#products">Initialize Inventory</Link>
                 </Button>
-                 <Button asChild size="lg" variant="outline">
-                  <Link href="#">
-                    Contact Us
-                  </Link>
+                <Button asChild size="lg" variant="outline" className="h-14 border-primary/50 text-primary hover:bg-primary/10">
+                  <Link href="#">System Specifications</Link>
                 </Button>
               </div>
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                {[
+                  { icon: Cpu, label: "Quantum Yield" },
+                  { icon: Zap, label: "Instant Dry" },
+                  { icon: Shield, label: "ISO Guard" },
+                  { icon: Globe, label: "Global Sync" }
+                ].map((feature, i) => (
+                  <div key={i} className="flex flex-col items-center gap-2 rounded-lg border border-white/5 bg-white/5 p-4 text-center">
+                    <feature.icon className="h-6 w-6 text-primary" />
+                    <span className="text-[10px] uppercase tracking-tighter text-muted-foreground">{feature.label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-muted/20">
-              <Image
-                src="/CEO.jpg"
-                alt="Prime Ink Technologies CEO"
-                fill
-                className="object-contain"
-                data-ai-hint="company ceo portrait"
-              />
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+              <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-black border border-primary/20 p-2">
+                <Image
+                  src="/CEO.jpg"
+                  alt="Prime Ink Systems Command"
+                  fill
+                  className="object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                  priority
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] pointer-events-none"></div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       
-      <section id="products" className="w-full py-12 md:py-24 lg:py-32">
+      <section id="products" className="relative z-10 w-full py-20 bg-black/40 backdrop-blur-sm">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Our Products</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Find the perfect high-quality toner cartridge for your printer.
-              </p>
-            </div>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl neon-glow font-headline">NEURAL ARCHIVE</h2>
+            <div className="h-1 w-24 bg-primary rounded-full"></div>
+            <p className="max-w-[800px] text-muted-foreground md:text-xl">
+              Access the complete directory of high-density toner cartridges.
+            </p>
           </div>
-          <div className="mx-auto grid grid-cols-1 gap-6 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          
+          <div className="mx-auto grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {currentProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-          <div className="flex justify-center items-center gap-4 mt-8">
-            <Button onClick={handlePreviousPage} disabled={currentPage === 1}>
-              Previous
+          
+          <div className="flex justify-center items-center gap-6 mt-16">
+            <Button 
+              onClick={handlePreviousPage} 
+              disabled={currentPage === 1}
+              variant="outline"
+              className="border-primary/20"
+            >
+              Previous Sector
             </Button>
-            <span className="text-muted-foreground">
-              Page {currentPage} of {totalPages}
-            </span>
-            <Button onClick={handleNextPage} disabled={currentPage === totalPages}>
-              Next
+            <div className="px-4 py-2 border border-primary/20 bg-primary/5 rounded font-mono text-sm text-primary">
+              LOC: {currentPage} / {totalPages}
+            </div>
+            <Button 
+              onClick={handleNextPage} 
+              disabled={currentPage === totalPages}
+              variant="outline"
+              className="border-primary/20"
+            >
+              Next Sector
             </Button>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
