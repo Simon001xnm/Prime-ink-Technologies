@@ -37,12 +37,12 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   const handleShopOnWhatsApp = () => {
-    const message = encodeURIComponent(`System Inquiry: Requesting order protocols for "${product.name}". UID: ${product.id}`);
+    const message = encodeURIComponent(`Hi, I'd like to order "${product.name}". (Product ID: ${product.id})`);
     const whatsappUrl = `https://wa.me/254710430203?text=${message}`;
     window.open(whatsappUrl, '_blank');
     toast({
-      title: "Establishing Uplink",
-      description: "Secure WhatsApp communication channel initialized.",
+      title: "Opening WhatsApp",
+      description: "Chatting with our sales team now.",
     });
   };
 
@@ -84,7 +84,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               {product.specifications.color}
             </span>
             <span className="text-[10px] font-mono text-muted-foreground uppercase">
-              {product.specifications.yield.split(' ')[1]} ARCHIVE
+              {product.specifications.yield.split(' ')[1]} YIELD
             </span>
           </div>
           <Link href={`/products/${product.id}`}>

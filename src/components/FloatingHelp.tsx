@@ -14,7 +14,7 @@ export default function FloatingHelp() {
   const [inputValue, setInputValue] = useState('');
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Neural Uplink Initialized. Requesting support.");
+    const message = encodeURIComponent("Hello, I need help with an order.");
     const whatsappUrl = `https://wa.me/254710430203?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -31,7 +31,7 @@ export default function FloatingHelp() {
     setTimeout(() => {
       setChatMessages([...newMessages, { 
         sender: 'bot' as const, 
-        text: 'Aura-X Neural Interface synchronized. Processing query... System meta-knowledge suggests high-yield sectors. How shall I assist further?' 
+        text: 'Hello! I am your assistant. How can I help you find the right toner today?' 
       }]);
     }, 1200);
   };
@@ -53,8 +53,8 @@ export default function FloatingHelp() {
                 <Cpu className="h-6 w-6" />
               </span>
               <div className="text-left">
-                <p className="text-xs font-bold uppercase tracking-widest text-primary">Neural Link</p>
-                <p className="text-[10px] text-muted-foreground uppercase">AI Intelligence</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-primary">Chat with AI</p>
+                <p className="text-[10px] text-muted-foreground uppercase">Smart Help</p>
               </div>
             </Button>
             <Button
@@ -66,8 +66,8 @@ export default function FloatingHelp() {
                 <Zap className="h-6 w-6" />
               </span>
               <div className="text-left">
-                <p className="text-xs font-bold uppercase tracking-widest text-red-500">Fast Comms</p>
-                <p className="text-[10px] text-muted-foreground uppercase">Direct WhatsApp</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-red-500">WhatsApp</p>
+                <p className="text-[10px] text-muted-foreground uppercase">Direct Support</p>
               </div>
             </Button>
           </div>
@@ -97,8 +97,8 @@ export default function FloatingHelp() {
                   </span>
                 </div>
                 <div>
-                  <CardTitle className="text-sm font-bold uppercase tracking-widest text-red-500">Aura-X Admin AI</CardTitle>
-                  <CardDescription className="text-[9px] uppercase font-mono text-red-400/70">Secure Uplink Active</CardDescription>
+                  <CardTitle className="text-sm font-bold uppercase tracking-widest text-red-500">Support Assistant</CardTitle>
+                  <CardDescription className="text-[9px] uppercase font-mono text-red-400/70">Secure Help Line</CardDescription>
                 </div>
               </div>
               <Button variant="ghost" size="icon" className="h-8 w-8 text-red-500/50 hover:text-red-500" onClick={() => setIsChatOpen(false)}>
@@ -111,7 +111,7 @@ export default function FloatingHelp() {
                     <Bot size={16} />
                 </div>
                 <div className="rounded-md bg-white/5 p-3 leading-relaxed border border-white/5">
-                    <span className="text-red-500 font-bold">AURA-X:</span> Greetings. Neural telemetry suggests procurement optimization is required. How can my logic assist you today?
+                    <span className="text-red-500 font-bold">AURA-X:</span> Hello! I'm your assistant. How can I help you find the right toner for your printer?
                 </div>
               </div>
               {chatMessages.map((msg, index) => (
@@ -120,14 +120,14 @@ export default function FloatingHelp() {
                     "flex h-8 w-8 shrink-0 items-center justify-center rounded border",
                     msg.sender === 'bot' ? "bg-red-500/10 text-red-500 border-red-500/30" : "bg-primary/10 text-primary border-primary/30"
                   )}>
-                    {msg.sender === 'bot' ? <Bot size={16} /> : <div className="text-[10px] font-bold">USR</div>}
+                    {msg.sender === 'bot' ? <Bot size={16} /> : <div className="text-[10px] font-bold">YOU</div>}
                   </div>
                   <div className={cn(
                     "rounded-md p-3 leading-relaxed border",
                     msg.sender === 'user' ? 'bg-primary/10 border-primary/20 text-blue-100' : 'bg-white/5 border-white/5'
                   )}>
                     <span className={cn("font-bold block mb-1", msg.sender === 'user' ? "text-primary" : "text-red-500")}>
-                      {msg.sender === 'user' ? "LOG:" : "AURA-X:"}
+                      {msg.sender === 'user' ? "MESSAGE:" : "AURA-X:"}
                     </span>
                     {msg.text}
                   </div>
@@ -139,7 +139,7 @@ export default function FloatingHelp() {
                 <Input
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
-                  placeholder="Input query command..."
+                  placeholder="Type your question..."
                   className="bg-black/50 border-red-500/20 focus-visible:ring-red-500 h-10 font-mono text-xs"
                 />
                 <Button type="submit" size="icon" className="h-10 w-10 shrink-0 bg-red-600 hover:bg-red-700">

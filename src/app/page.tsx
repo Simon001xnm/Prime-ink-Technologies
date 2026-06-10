@@ -41,11 +41,11 @@ export default function Home() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                   </span>
-                  Neural Systems Active
+                  System Online
                 </div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-red-500">
                   <AlertTriangle className="h-3 w-3 animate-pulse" />
-                  Priority Uplink Established
+                  Premium Support
                 </div>
               </div>
               <div className="space-y-4">
@@ -55,23 +55,23 @@ export default function Home() {
                   <span className="text-red-500">INK</span>
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                  Engineered for precision. Optimized for longevity. Prime Ink Technologies delivers industrial-grade toner via automated supply lines.
+                  Industrial-grade toner built for performance. Get high-quality prints that last longer, delivered right to your door.
                 </p>
               </div>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Button asChild size="lg" className="h-14 px-8 text-lg font-bold uppercase tracking-widest shadow-[0_0_20px_rgba(14,165,233,0.4)] transition-all hover:scale-105">
-                  <Link href="#products">Initialize Inventory</Link>
+                  <Link href="#products">Shop All Toners</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="h-14 border-red-500/50 text-red-500 hover:bg-red-500/10">
-                  <Link href="#">Core Specifications</Link>
+                  <Link href="#">View Specs</Link>
                 </Button>
               </div>
               <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
                 {[
-                  { icon: Cpu, label: "Quantum Yield", color: "text-primary" },
-                  { icon: Zap, label: "Instant Dry", color: "text-red-500" },
-                  { icon: Shield, label: "ISO Guard", color: "text-primary" },
-                  { icon: Globe, label: "Global Sync", color: "text-red-500" }
+                  { icon: Cpu, label: "Max Yield", color: "text-primary" },
+                  { icon: Zap, label: "Fast Dry", color: "text-red-500" },
+                  { icon: Shield, label: "Reliable", color: "text-primary" },
+                  { icon: Globe, label: "Always Stocked", color: "text-red-500" }
                 ].map((feature, i) => (
                   <div key={i} className="flex flex-col items-center gap-2 rounded-lg border border-white/5 bg-white/5 p-4 text-center tech-border">
                     <feature.icon className={`h-6 w-6 ${feature.color}`} />
@@ -100,10 +100,10 @@ export default function Home() {
       <section id="products" className="relative z-10 w-full py-20 bg-black/40 backdrop-blur-sm">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl neon-glow font-headline">NEURAL ARCHIVE</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl neon-glow font-headline">AVAILABLE TONERS</h2>
             <div className="h-1 w-24 bg-gradient-to-r from-primary to-red-600 rounded-full"></div>
             <p className="max-w-[800px] text-muted-foreground md:text-xl">
-              Access the complete directory of high-density toner cartridges.
+              Find the perfect cartridge for your printer.
             </p>
           </div>
           
@@ -120,10 +120,10 @@ export default function Home() {
               variant="outline"
               className="border-primary/20"
             >
-              Previous Sector
+              Previous Page
             </Button>
             <div className="px-4 py-2 border border-white/10 bg-white/5 rounded font-mono text-sm text-primary flex gap-2">
-              <span className="text-red-500">LOC:</span> {currentPage} / {totalPages}
+              <span className="text-red-500">PAGE:</span> {currentPage} / {totalPages}
             </div>
             <Button 
               onClick={handleNextPage} 
@@ -131,7 +131,7 @@ export default function Home() {
               variant="outline"
               className="border-primary/20"
             >
-              Next Sector
+              Next Page
             </Button>
           </div>
         </div>

@@ -8,9 +8,9 @@ import { Logo } from '@/components/Logo';
 import { useState } from 'react';
 
 const navLinks = [
-  { href: '/#products', label: 'Sector Archive', icon: Terminal },
-  { href: '/track-order', label: 'Neural Tracker', icon: Shield },
-  { href: '/account', label: 'User Profile', icon: User },
+  { href: '/#products', label: 'Shop Products', icon: Terminal },
+  { href: '/track-order', label: 'Track Order', icon: Shield },
+  { href: '/account', label: 'My Account', icon: User },
 ];
 
 export default function Header() {
@@ -86,7 +86,7 @@ export default function Header() {
           <Link href="/login">
             <Button variant="outline" className="border-red-500/50 text-red-500 hidden sm:flex font-mono text-xs uppercase tracking-tighter hover:bg-red-500/10">
               <User className="mr-2 h-4 w-4" />
-              Auth Sync
+              Login
             </Button>
             <Button variant="ghost" size="icon" className="sm:hidden text-red-500">
               <User className="h-5 w-5" />
