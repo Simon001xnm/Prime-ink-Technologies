@@ -39,7 +39,7 @@ export default function Footer() {
           <p className="mt-2">
             Developed and maintained by{' '}
             <a
-              href="https://simon-websites.vercel.app/services"
+              href="https://simonstyles.co.ke/portfolio"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-foreground"
