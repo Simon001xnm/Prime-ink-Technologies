@@ -63,23 +63,38 @@ export default function Home() {
                   <Link href="#products">Shop All Toners</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="h-14 border-red-500/50 text-red-500 hover:bg-red-500/10">
-                  <Link href="#">View Specs</Link>
+                  <Link href="#why-us">Why Choose Us?</Link>
                 </Button>
               </div>
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-                {[
-                  { icon: Cpu, label: "Max Yield", color: "text-primary" },
-                  { icon: Zap, label: "Fast Dry", color: "text-red-500" },
-                  { icon: Shield, label: "Reliable", color: "text-primary" },
-                  { icon: Globe, label: "Always Stocked", color: "text-red-500" }
-                ].map((feature, i) => (
-                  <div key={i} className="flex flex-col items-center gap-2 rounded-lg border border-white/5 bg-white/5 p-4 text-center tech-border">
-                    <feature.icon className={`h-6 w-6 ${feature.color}`} />
-                    <span className="text-[10px] uppercase tracking-tighter text-muted-foreground">{feature.label}</span>
-                  </div>
-                ))}
+
+              <div id="why-us" className="pt-4 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="h-px flex-1 bg-gradient-to-r from-transparent to-white/10"></div>
+                  <h3 className="text-xs font-bold uppercase tracking-[0.3em] text-red-500">Why we are the best suppliers</h3>
+                  <div className="h-px flex-1 bg-gradient-to-l from-transparent to-white/10"></div>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                  {[
+                    { icon: Cpu, label: "Max Yield", color: "text-primary", desc: "More pages per cartridge" },
+                    { icon: Zap, label: "Fast Dry", color: "text-red-500", desc: "No smudges, instant drying" },
+                    { icon: Shield, label: "Reliable", color: "text-primary", desc: "No leaks, perfect quality" },
+                    { icon: Globe, label: "Always Stocked", color: "text-red-500", desc: "Never wait for shipping" }
+                  ].map((feature, i) => (
+                    <div key={i} className="group flex flex-col items-center gap-3 rounded-lg border border-white/5 bg-white/5 p-5 text-center transition-all hover:border-primary/30 hover:bg-white/10 tech-border">
+                      <div className={`rounded-full p-2 bg-black/40 border border-white/5 group-hover:scale-110 transition-transform`}>
+                        <feature.icon className={`h-6 w-6 ${feature.color}`} />
+                      </div>
+                      <div className="space-y-1">
+                        <span className="block text-xs font-black uppercase tracking-widest text-foreground group-hover:text-primary transition-colors">{feature.label}</span>
+                        <span className="block text-[8px] uppercase tracking-tighter text-muted-foreground leading-tight">{feature.desc}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
+            
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary via-red-600 to-primary rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
               <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-black border border-white/10 p-2">
@@ -100,7 +115,7 @@ export default function Home() {
       <section id="products" className="relative z-10 w-full py-20 bg-black/40 backdrop-blur-sm">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl neon-glow font-headline">AVAILABLE TONERS</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl neon-glow font-headline uppercase">Available Toners</h2>
             <div className="h-1 w-24 bg-gradient-to-r from-primary to-red-600 rounded-full"></div>
             <p className="max-w-[800px] text-muted-foreground md:text-xl">
               Find the perfect cartridge for your printer.
@@ -123,7 +138,7 @@ export default function Home() {
               Previous Page
             </Button>
             <div className="px-4 py-2 border border-white/10 bg-white/5 rounded font-mono text-sm text-primary flex gap-2">
-              <span className="text-red-500">PAGE:</span> {currentPage} / {totalPages}
+              <span className="text-red-500 uppercase tracking-tighter">Page:</span> {currentPage} / {totalPages}
             </div>
             <Button 
               onClick={handleNextPage} 
